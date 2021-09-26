@@ -1,11 +1,14 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const Search = ({setSearch, fetchToRepos}) => {
   const [value, setValue] = useState('')
-  const toSearch = () => {
+  const toSearch = async () => {
     setSearch(value)
     fetchToRepos()
   }
+  useEffect(() => {
+    setSearch(value)
+  })
 
   return (
     <div>
