@@ -3,7 +3,7 @@ import axios from "axios";
 
 class Search {
   value = ''
-  response = []
+  response = {}
 
   constructor() {
     makeAutoObservable(this)

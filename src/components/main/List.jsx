@@ -5,7 +5,7 @@ import list from './../../store/list'
 import {observer} from "mobx-react-lite";
 
 const List = observer( () => {
-  list.setItems(search.response.items)
+  if (search.response.items) list.setItems(search.response.items)
   return (
     <ul className="repos__list">
       {list.items.map(el =>

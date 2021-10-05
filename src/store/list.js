@@ -9,7 +9,6 @@ class List {
 
   setItems(dataItems) {
     this.items = dataItems
-    console.log(this.items)
     return this.items
   }
 }
