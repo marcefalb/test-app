@@ -8,7 +8,7 @@ const List = observer( () => {
   if (search.response.items) list.setItems(search.response.items)
   return (
     <ul className="repos__list">
-      {list.items.map(el =>
+      {list.items.map(el =>dsafdas
         <li className="repos__item" key={el.id}>
           <Link to={`/Repo/${el.owner.login}/${el.name}`} className="repos__link">
             <span className="repos__name">{el.name}</span>
