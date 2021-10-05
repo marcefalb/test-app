@@ -1,14 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import search from './../../store/search'
-import list from './../../store/list'
-import {observer} from "mobx-react-lite";
 
-const List = observer( () => {
-  list.setItems(search.response.items)
+const List = ({items}) => {
   return (
     <ul className="repos__list">
-      {list.items.map(el =>
+      {items.map(el =>
         <li className="repos__item" key={el.id}>
           <Link to={`/Repo/${el.owner.login}/${el.name}`} className="repos__link">
             <span className="repos__name">{el.name}</span>
@@ -24,6 +20,6 @@ const List = observer( () => {
       )}
     </ul>
   )
-});
+};
 
 export default List
