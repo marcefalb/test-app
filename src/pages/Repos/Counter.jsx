@@ -1,13 +1,12 @@
 import React from 'react'
-import counter from './../../store/counter'
-import search from './../../store/search'
 import {observer} from "mobx-react-lite";
+import repos from "../../store/repos";
 
 const Counter = observer(() => {
   return (
     <div className="counter">
       <span className="counter__title">Количество репозиториев:</span>
-      <span className="counter__num">{counter.setTotalCount(search.response.total_count)}</span>
+      <span className="counter__num">{repos.totalCount}</span>
     </div>
   )
 })

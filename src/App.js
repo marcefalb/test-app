@@ -1,11 +1,11 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Header from './components/general/Header'
+import Header from './components/Header'
 
 import './assets/styles/App.css'
 
-const Main = lazy(() => import('./components/pages/Main'))
-const Repo = lazy(() => import('./components/pages/Repo'))
+const Main = lazy(() => import('./pages/Main'))
+const Repo = lazy(() => import('./pages/Repo'))
 
 
 function App() {

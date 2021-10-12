@@ -1,7 +1,7 @@
 import React from 'react'
-import Search from './../main/Search'
-import Counter from './../main/Counter'
-import List from './../main/List'
+import Search from './Repos/Search'
+import Counter from './Repos/Counter'
+import List from './Repos/List'
 
 const Main = () => {
   return (
