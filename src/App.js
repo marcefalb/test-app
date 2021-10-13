@@ -15,7 +15,7 @@ function App() {
       <Suspense fallback={<div>Загрузка...</div>}>
         <Switch>
           <Route exact path='/' component={Main}/>
-          <Route path='/Repo/:owner/:name' component={Repo}/>
+          <Route path='/Repo/:login/:name' component={Repo}/>
         </Switch>
       </Suspense>
     </Router>

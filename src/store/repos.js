@@ -25,6 +25,14 @@ class repos {
     this.totalCount = response.data.total_count
   }
 
+  async fetchToRepo(login, name) {
+    const response = await fetches.toRepo(login, name)
+    this.items.clear()
+    const repoItem = new repo(response.data)
+    this.items.set(response.data.id, repoItem)
+  }
+
+
   get list() {
     return values(this.items)
   }

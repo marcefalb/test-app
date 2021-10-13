@@ -1,13 +1,19 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Fav from "../../components/Fav";
 import {observer} from "mobx-react-lite";
+import {ReactComponent as IcFav} from '../../assets/icons/fav.svg'
 
-const Repo = observer((repo, key) => {
+const Repo = observer(({repo, key}) => {
   return (
     <li className="repos__item" key={key}>
-      <Link to={`/Repo/${repo.owner}/${repo.name}`} className="repos__link">
-        <Fav isFav={repo.isFav}/>
+      <Link repo={repo} to={`/Repo/${repo.login}/${repo.name}`} className="repos__link">
+        <IcFav
+          className={repo.isFav ? 'repos__like repos__like_active' : 'repos__like'}
+          onClick={event => {
+            event.preventDefault()
+            repo.setFav()
+          }}
+        />
         <span className="repos__name">{repo.name}</span>
         <p className="repos__description">{repo.description}</p>
         <div className="repos__stars">

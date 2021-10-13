@@ -4,6 +4,7 @@ class repo {
   name = ''
   description = ''
   stars = ''
+  owner = ''
   login = ''
   img = ''
   isFav = false
@@ -14,12 +15,12 @@ class repo {
     this.id = item.id
     this.name = item.name
     this.description = item.description
-    this.stars = item.stars
-    this.login = item.login
-    this.img = item.img
+    this.stars = item.stargazers_count
+    this.login = item?.owner.login
+    this.img = item?.owner.avatar_url
   }
 
-  toggleFav() {
+  setFav() {
     this.isFav = !this.isFav
   }
 }

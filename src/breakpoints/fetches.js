@@ -12,9 +12,9 @@ class Fetches {
       })
     )}
 
-  static async toRepo(owner, name) {
+  static async toRepo(login, name) {
     return (
-      await axios.get(`https://api.github.com/repos/${owner}/${name}`)
+      await axios.get(`https://api.github.com/repos/${login}/${name}`)
       .catch(error => {
         if (error.res) {
           console.log(error.res);

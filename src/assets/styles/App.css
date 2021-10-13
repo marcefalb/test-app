@@ -158,7 +158,18 @@ main {
   height: 100%;
 
   padding: 20px;
+
+  position: relative;
 }
+.repos__like {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.repos__like_active {
+  fill: #2d2d2d;
+}
+.repos__link
 .repos__name {
   font-size: 20px;
   font-weight: 600;

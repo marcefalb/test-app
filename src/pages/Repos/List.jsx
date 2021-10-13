@@ -6,10 +6,10 @@ import Repo from "./Repo";
 const List = observer( () => {
   return  (
     <ul className="repos__list">
-      {repos.list.map((item, index) => {
+      {repos.list.map(item => {
           const repo = repos.items.get(item.id)
           return (
-            <Repo repo={repo} key={index}/>
+            <Repo repo={repo} key={item.id}/>
           )
         }
       )}
